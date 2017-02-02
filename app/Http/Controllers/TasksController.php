@@ -18,12 +18,10 @@ class TasksController extends Controller
         ]);
     }
 
-    public function show ($id)
+    // This is an example of route model binding:
+    public function show (Task $task) // this essentially does -> Task::find(wildcard);
     {
-        // $task = DB::table('tasks')->find($id);
-        // Too verbose. We can just use...:
-        $task = Task::find($id);
-
+        // Binds model Task to this routel.
         return view('tasks.show', compact('task'));
     }
 
