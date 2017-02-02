@@ -31,6 +31,7 @@ use App\Task;
 
 Route::get('/', function () {
 
+
     // $tasks = DB::table('tasks')->get();
         // Laravels query builder.
         // Also could use filters like where()
