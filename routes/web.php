@@ -13,5 +13,10 @@
 
 Route::get('/tasks', 'TasksController@index');
 Route::get('/tasks/incomplete', 'TasksController@incomplete');
+Route::get('/tasks/add', 'TasksController@add');
+Route::post('/tasks', 'TasksController@store');
+Route::post('/complete-task/{id}', 'TasksController@completeTask');
+Route::post('/redo-task/{id}', 'TasksController@redoTask');
+Route::post('/delete-task/{id}', 'TasksController@deleteTask');
 Route::get('/tasks/{task}', 'TasksController@show');
 

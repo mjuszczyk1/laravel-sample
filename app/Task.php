@@ -24,6 +24,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+
+    protected $fillable = ['title', 'body'];
+
     // query scopes
     // Two options, first is static function:
     // public static function incomplete()
@@ -48,7 +51,6 @@ class Task extends Model
         // you'll have to use get():
         //      Task::incomplete()->get();
     }
-    public function isComplete() {
-        return false;
-    }
+
+
 }
